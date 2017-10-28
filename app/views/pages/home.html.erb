@@ -5,7 +5,10 @@
         <title>Home Page</title>
     </head>
     <body>
-        <p>Welcome to my website!</p>
+        <div class="center jumbotron">
+            <h1>Alpha Blog</h1>
+            <p>Welcome to my website!</p>
+            <%= link_to "Sign up now", "#", class: "btn btn-primary btn-xlarge" %> | <%= link_to 'About', about_path %>
+        </div>
     </body>
-    <%= link_to 'Blog', articles_path %> | <%= link_to 'About', about_path %>
 </html>

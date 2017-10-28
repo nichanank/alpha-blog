@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'layouts/navigation' %>
   <%= render 'layouts/messages' %>
-  <%= yield %>
-
+  <div class="container">
+  <!--All the other areas in the app gets served through this following line-->
+    <%= yield %> 
+  </div>
+<%= render 'layouts/footer' %>
 </body>
 </html>
