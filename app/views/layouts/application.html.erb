@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AlphaBlog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render 'layouts/navigation' %>
-  <%= render 'layouts/messages' %>
-  <div class="container">
-  <!--All the other areas in the app gets served through this following line-->
-    <%= yield %> 
-  </div>
-<%= render 'layouts/footer' %>
-</body>
+  <head>
+    <title>AlphaBlog</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/messages' %>
+    <div class="container">
+    <!--All the other areas in the app gets served through this yield command-->
+      <%= yield %> 
+    </div>
+  <%= render 'layouts/footer' %>
+  </body>
 </html>
