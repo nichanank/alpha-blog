@@ -10,7 +10,9 @@ class ArticlesController < ApplicationController
     end
     
     def create
+        debugger
         @article = Article.new(article_params)
+        @article.user = User.first #Temporary hard code to not worry about creating accounts yet
         if @article.save
             flash[:success] = "New article successfully created."
             redirect_to article_path(@article)
